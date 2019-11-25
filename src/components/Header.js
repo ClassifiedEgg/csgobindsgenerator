@@ -1,18 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Box, Typography } from '@material-ui/core';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 
 const Header = () => {
 
-    const displaySelectedKey = useStoreState(state => state.displaySelectedKey);
-    const setKey = useStoreActions(actions => actions.changeCurrentKey);
+    const displaySelectedKey = useStoreState(state => state.currentSelectedKey);
+    const setCurrentKey = useStoreActions(actions => actions.changeCurrentKey);
+    const getCurrentKeyBinds = useStoreState(state => state.currentSelectedBinds);
 
     const buttonOnClick = (e) => {
         const location = { 0: "", 1: "Left", 2: "Right", 3: "Numpad" };
-        const display = `${e.location === 0 ? "" : (location[e.location] + " ")}${e.key}`;
-        const key = e.key;
-        const keyCode = e.keyCode;
-        setKey({ display, key, keyCode });
+        const key =
+            `${e.location === 0 ? "" : (location[e.location] + " ")}${e.location === 0 ? (e.key.toLowerCase()) : (e.key)}`;
+        let keyCode = e.keyCode;
+        setCurrentKey({ key, keyCode });
     }
 
     return (

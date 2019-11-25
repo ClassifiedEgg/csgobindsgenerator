@@ -6,7 +6,7 @@ import { gunList } from '../static/gunlist'
 const Guns = () => {
     const renderGunList = () => {
         return gunList.map(({ title, subTypes }, i) => {
-            let subTypesBtns = subTypes.map(({ name }, i) => (<Button name={name} key={i} />));
+            let subTypesBtns = subTypes.map(({ name, command }, i) => (<Button name={name} command={command} key={i} />));
 
             return (
                 <Grid item xs align="center" key={i}>
