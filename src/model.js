@@ -5,6 +5,8 @@ export const model = {
     currentSelectedCode: null,
     currentSelectedBinds: [],
     allBinds: [],
+    copyChangeFromLastTime: true,
+    downloadChangeFromLastTime: true,
     changeCurrentKey: action((state, { key, keyCode }) => {
         state.currentSelectedKey = key;
         state.currentSelectedCode = keyCode;
@@ -25,6 +27,8 @@ export const model = {
             };
             state.allBinds.push(newKeyBind);
         }
+        state.copyChangeFromLastTime = true;
+        state.downloadChangeFromLastTime = true;
     }),
     removeBindFromCurrent: action((state, payload) => {
         state.currentSelectedBinds = state.currentSelectedBinds.filter((cmd) => cmd !== payload);
@@ -34,5 +38,12 @@ export const model = {
         if (state.currentSelectedBinds.length === 0) {
             state.allBinds = state.allBinds.filter(({ binds }) => binds.length !== 0)
         }
+        state.copyChangeFromLastTime = true;
+        state.downloadChangeFromLastTime = true;
+    }),
+    setChangeToFalse: action((state, payload) => {
+        payload === "copy" ? 
+            state.copyChangeFromLastTime = false :
+            state.downloadChangeFromLastTime = false;
     })
 }
