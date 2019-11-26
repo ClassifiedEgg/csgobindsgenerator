@@ -9,13 +9,13 @@ export const model = {
         state.currentSelectedKey = key;
         state.currentSelectedCode = keyCode;
         state.currentSelectedBinds
-            = state.allBinds.find(({ key }) => key === state.currentSelectedKey)
-                ? state.allBinds.find(({ key }) => key === state.currentSelectedKey).binds : [];
+            = state.allBinds.find(({ keyCode }) => keyCode === state.currentSelectedCode)
+                ? state.allBinds.find(({ keyCode }) => keyCode === state.currentSelectedCode).binds : [];
     }),
     addBindToCurrentKey: action((state, payload) => {
         state.currentSelectedBinds = [...state.currentSelectedBinds, payload];
-        if (state.allBinds.find(({ key }) => key === state.currentSelectedKey)) {
-            state.allBinds.find(({ key }) => key === state.currentSelectedKey).binds
+        if (state.allBinds.find(({ keyCode }) => keyCode === state.currentSelectedCode)) {
+            state.allBinds.find(({ keyCode }) => keyCode === state.currentSelectedCode).binds
                 = state.currentSelectedBinds;
         } else {
             let newKeyBind = {
@@ -28,7 +28,11 @@ export const model = {
     }),
     removeBindFromCurrent: action((state, payload) => {
         state.currentSelectedBinds = state.currentSelectedBinds.filter((cmd) => cmd !== payload);
-        state.allBinds.find(({ key }) => key === state.currentSelectedKey).binds
+        state.allBinds.find(({ keyCode }) => keyCode === state.currentSelectedCode).binds
             = state.currentSelectedBinds;
+
+        if (state.currentSelectedBinds.length === 0) {
+            state.allBinds = state.allBinds.filter(({ binds }) => binds.length !== 0)
+        }
     })
 }

@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import { Button, Box, Typography } from '@material-ui/core';
 import { useStoreState, useStoreActions } from 'easy-peasy';
+import { keylist } from '../static/keylist';
 
 const Header = () => {
 
     const displaySelectedKey = useStoreState(state => state.currentSelectedKey);
     const setCurrentKey = useStoreActions(actions => actions.changeCurrentKey);
-    const getCurrentKeyBinds = useStoreState(state => state.currentSelectedBinds);
 
     const buttonOnClick = (e) => {
         const location = { 0: "", 1: "Left", 2: "Right", 3: "Numpad" };
         const key =
-            `${e.location === 0 ? "" : (location[e.location] + " ")}${e.location === 0 ? (e.key.toLowerCase()) : (e.key)}`;
-        let keyCode = e.keyCode;
+            `${e.location === 0 ? "" : (location[e.location] + " ")}${e.location === 0 ? (e.key.toUpperCase()) : (e.key)}`;
+        let keyCode = keylist.find(({ keyName }) => keyName.includes(e.code)).key;
         setCurrentKey({ key, keyCode });
     }
 
@@ -31,7 +31,7 @@ const Header = () => {
                         variant="contained"
                         color="secondary"
                         size='small'
-                        onKeyDown={(e) => buttonOnClick(e)}
+                        onKeyDown={(e) => buttonOnClick(e.nativeEvent)}
                     >
                         {displaySelectedKey}
                     </Button>
