@@ -24,8 +24,9 @@ const Header = () => {
 
     const buttonOnClick = (e) => {
         const location = { 0: "", 1: "Left", 2: "Right", 3: "Numpad" };
-        const key =
+        let key =
             `${e.location === 0 ? "" : (location[e.location] + " ")}${e.location === 0 ? (e.key.toUpperCase()) : (e.key)}`;
+        key = key === " " ? "Space" : key;
         let keyCode = keylist.find(({ keyName }) => keyName.includes(e.code)).key;
         setCurrentKey({ key, keyCode });
     }
