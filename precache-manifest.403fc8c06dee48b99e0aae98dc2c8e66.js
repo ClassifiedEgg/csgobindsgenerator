@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b61aa047edae36bb5acb5431bcf96f75",
+    "revision": "b229015c47d8eba43c5f5be2b9c6457f",
     "url": "/csgobindsgenerator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/csgobindsgenerator/static/css/2.07e7f957.chunk.css"
   },
   {
-    "revision": "e89d5b7bb6ec5f92b20a",
+    "revision": "9bcd244e68c5e7b7b53b",
     "url": "/csgobindsgenerator/static/css/main.b100e6da.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/csgobindsgenerator/static/js/2.77e4e255.chunk.js"
   },
   {
-    "revision": "e89d5b7bb6ec5f92b20a",
-    "url": "/csgobindsgenerator/static/js/main.6048dec1.chunk.js"
+    "revision": "9bcd244e68c5e7b7b53b",
+    "url": "/csgobindsgenerator/static/js/main.ba5b954f.chunk.js"
   },
   {
     "revision": "ad4f0e53b3841923fb98",

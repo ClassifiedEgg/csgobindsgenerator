@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/csgobindsgenerator/precache-manifest.c94326f2600c70e73dc9c9c730d32e07.js"
+  "/csgobindsgenerator/precache-manifest.403fc8c06dee48b99e0aae98dc2c8e66.js"
 );
 
 self.addEventListener('message', (event) => {
