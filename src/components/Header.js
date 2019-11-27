@@ -1,9 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button, Box, Typography } from '@material-ui/core';
 import { useStoreState, useStoreActions } from 'easy-peasy';
+import { makeStyles } from '@material-ui/core/styles';
+import { green } from "@material-ui/core/colors";
 import { keylist } from '../static/keylist';
 
 const Header = () => {
+
+    const useStyles = makeStyles(theme => ({
+        showKey: {
+            color: theme.palette.getContrastText(green[700]),
+            backgroundColor: green[500],
+            "&:hover": {
+                backgroundColor: green[700]
+            }
+        }
+    }));
+
+    const classes = useStyles();
 
     const displaySelectedKey = useStoreState(state => state.currentSelectedKey);
     const setCurrentKey = useStoreActions(actions => actions.changeCurrentKey);
@@ -19,19 +33,20 @@ const Header = () => {
     return (
         <div>
             <Typography variant='h3' component='div'>
-                <Box fontWeight={500} textAlign="center" my={2}>
-                    CSGO Bind
+                <Box fontWeight={700} textAlign="center" mt={2} mb={1}>
+                    CS:GO Buy Bind Generator
                 </Box>
             </Typography>
 
             <Typography component='div'>
                 <Box align='center'>
-                    <Box component='div'>Currently setting binds for</Box>
+                    <Box component='div' my={1}>Currently setting binds for</Box>
                     <Button
                         variant="contained"
                         color="secondary"
                         size='small'
                         onKeyDown={(e) => buttonOnClick(e.nativeEvent)}
+                        className={classes.showKey}
                     >
                         {displaySelectedKey}
                     </Button>

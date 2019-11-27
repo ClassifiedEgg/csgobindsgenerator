@@ -11,7 +11,7 @@ const Guns = () => {
             return (
                 <Grid item xs align="center" key={i}>
                     <Typography component='div'>
-                        <Box textAlign="center">{title}</Box>
+                        <Box textAlign="center" fontWeight={500}>{title}</Box>
                     </Typography>
                     {subTypesBtns}
                 </Grid>

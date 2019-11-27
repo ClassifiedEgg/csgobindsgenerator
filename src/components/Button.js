@@ -5,7 +5,6 @@ import { useStoreState, useStoreActions } from 'easy-peasy';
 const CustomButton = ({ name, command }) => {
 
     const currentKey = useStoreState(state => state.currentSelectedKey);
-    const currentKeyBinds = useStoreState(state => state.currentSelectedBinds);
     const addBindToCurrent = useStoreActions(actions => actions.addBindToCurrentKey);
     const removeBindFromCurrent = useStoreActions(actions => actions.removeBindFromCurrent);
     const isBindInBinds = useStoreState(state => state.currentSelectedBinds).find(bind => bind === command)

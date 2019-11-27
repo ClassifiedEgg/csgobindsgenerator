@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Copy from 'copy-to-clipboard';
 import { useStoreState, useStoreActions } from 'easy-peasy';
 import { Grid, Box, Button, IconButton } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { green, grey, teal } from "@material-ui/core/colors";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import DescriptionIcon from '@material-ui/icons/Description';
 import AssignmentIcon from '@material-ui/icons/Assignment';
@@ -9,10 +11,44 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 const Utility = () => {
 
+    const useStyles = makeStyles(theme => ({
+        github: {
+            color: theme.palette.getContrastText(grey[800]),
+            backgroundColor: grey[800],
+            "&:hover": {
+                backgroundColor: grey[900]
+            }
+        },
+        downloadFalse: {
+            color: theme.palette.getContrastText(teal[600]),
+            backgroundColor: teal[600],
+            "&:hover": {
+                backgroundColor: teal[700]
+            }
+        },
+        copyFalse: {
+            color: theme.palette.getContrastText(teal[600]),
+            backgroundColor: teal[600],
+            "&:hover": {
+                backgroundColor: teal[700]
+            }
+        },
+        copyDowloadTrue: {
+            color: theme.palette.getContrastText(green[500]),
+            backgroundColor: green[500],
+            "&:hover": {
+                backgroundColor: green[500]
+            }
+        },
+    }));
+
+    const classes = useStyles();
+
     const checkCopyChange = useStoreState(state => state.copyChangeFromLastTime);
     const checkDownloadChange = useStoreState(state => state.downloadChangeFromLastTime);
 
     const setChangeToFalse = useStoreActions(actions => actions.setChangeToFalse);
+    const toggleTheme = useStoreActions(actions => actions.toggleTheme);
 
     const binds = useStoreState(state => state.allBinds)
         .map(({ keyCode, binds }) => {
@@ -55,6 +91,7 @@ const Utility = () => {
                         startIcon={<AssignmentIcon />}
                         onClick={() => copyToClipboard()}
                         disabled={allBinds.length > 0 ? false : true}
+                        className={checkCopyChange ? classes.copyFalse : classes.copyDowloadTrue}
                     >
                         {checkCopyChange ? "Copy to Clipboard" : "Copied!"}
                     </Button>
@@ -68,6 +105,7 @@ const Utility = () => {
                         startIcon={<DescriptionIcon />}
                         onClick={() => downloadBinds()}
                         disabled={allBinds.length > 0 ? false : true}
+                        className={checkDownloadChange ? classes.downloadFalse : classes.copyDowloadTrue}
                     >
                         {checkDownloadChange ? "Download as txt file" : "Downloading!"}
                     </Button>
@@ -79,6 +117,7 @@ const Utility = () => {
                         color="primary"
                         size='medium'
                         startIcon={<GitHubIcon />}
+                        className={classes.github}
                         href="https://github.com/ClassifiedEgg/csgobindsgenerator"
                     >
                         Github
@@ -86,7 +125,10 @@ const Utility = () => {
                 </Box>
 
                 <Box my={3}>
-                    <IconButton color="secondary" aria-label="night mode">
+                    <IconButton 
+                    color="inherit" 
+                    onClick={() => toggleTheme()}
+                    aria-label="night mode">
                         <Brightness4Icon fontSize="large" />
                     </IconButton>
                 </Box>

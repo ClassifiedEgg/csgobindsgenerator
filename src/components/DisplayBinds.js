@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid, Box, TextField } from '@material-ui/core';
-import { useStoreState, useStoreActions } from 'easy-peasy';
+import { useStoreState } from 'easy-peasy';
 
 const DisplayBinds = () => {
 

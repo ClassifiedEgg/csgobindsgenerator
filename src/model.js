@@ -1,6 +1,7 @@
 import { action } from 'easy-peasy'
 
 export const model = {
+    theme: 'light',
     currentSelectedKey: 'Click to change',
     currentSelectedCode: null,
     currentSelectedBinds: [],
@@ -45,5 +46,8 @@ export const model = {
         payload === "copy" ? 
             state.copyChangeFromLastTime = false :
             state.downloadChangeFromLastTime = false;
+    }),
+    toggleTheme: action((state) => {
+        state.theme = state.theme === "light" ? "dark" : "light";
     })
 }
