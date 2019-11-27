@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/csgobindsgenerator/static/css/main.b100e6da.chunk.css",
+    "main.js": "/csgobindsgenerator/static/js/main.6048dec1.chunk.js",
+    "main.js.map": "/csgobindsgenerator/static/js/main.6048dec1.chunk.js.map",
+    "runtime-main.js": "/csgobindsgenerator/static/js/runtime-main.0238bcfb.js",
+    "runtime-main.js.map": "/csgobindsgenerator/static/js/runtime-main.0238bcfb.js.map",
+    "static/css/2.07e7f957.chunk.css": "/csgobindsgenerator/static/css/2.07e7f957.chunk.css",
+    "static/js/2.77e4e255.chunk.js": "/csgobindsgenerator/static/js/2.77e4e255.chunk.js",
+    "static/js/2.77e4e255.chunk.js.map": "/csgobindsgenerator/static/js/2.77e4e255.chunk.js.map",
+    "index.html": "/csgobindsgenerator/index.html",
+    "precache-manifest.c94326f2600c70e73dc9c9c730d32e07.js": "/csgobindsgenerator/precache-manifest.c94326f2600c70e73dc9c9c730d32e07.js",
+    "service-worker.js": "/csgobindsgenerator/service-worker.js",
+    "static/css/2.07e7f957.chunk.css.map": "/csgobindsgenerator/static/css/2.07e7f957.chunk.css.map",
+    "static/css/main.b100e6da.chunk.css.map": "/csgobindsgenerator/static/css/main.b100e6da.chunk.css.map",
+    "static/media/index.css": "/csgobindsgenerator/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0238bcfb.js",
+    "static/css/2.07e7f957.chunk.css",
+    "static/js/2.77e4e255.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.6048dec1.chunk.js"
+  ]
+}
