@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/csgobindsgenerator/static/css/main.b100e6da.chunk.css",
-    "main.js": "/csgobindsgenerator/static/js/main.ba5b954f.chunk.js",
-    "main.js.map": "/csgobindsgenerator/static/js/main.ba5b954f.chunk.js.map",
+    "main.js": "/csgobindsgenerator/static/js/main.2ef59638.chunk.js",
+    "main.js.map": "/csgobindsgenerator/static/js/main.2ef59638.chunk.js.map",
     "runtime-main.js": "/csgobindsgenerator/static/js/runtime-main.0238bcfb.js",
     "runtime-main.js.map": "/csgobindsgenerator/static/js/runtime-main.0238bcfb.js.map",
     "static/css/2.07e7f957.chunk.css": "/csgobindsgenerator/static/css/2.07e7f957.chunk.css",
-    "static/js/2.77e4e255.chunk.js": "/csgobindsgenerator/static/js/2.77e4e255.chunk.js",
-    "static/js/2.77e4e255.chunk.js.map": "/csgobindsgenerator/static/js/2.77e4e255.chunk.js.map",
+    "static/js/2.340e2d3b.chunk.js": "/csgobindsgenerator/static/js/2.340e2d3b.chunk.js",
+    "static/js/2.340e2d3b.chunk.js.map": "/csgobindsgenerator/static/js/2.340e2d3b.chunk.js.map",
     "index.html": "/csgobindsgenerator/index.html",
-    "precache-manifest.403fc8c06dee48b99e0aae98dc2c8e66.js": "/csgobindsgenerator/precache-manifest.403fc8c06dee48b99e0aae98dc2c8e66.js",
+    "precache-manifest.b95461ae2765d56732c1ee3363ab68f0.js": "/csgobindsgenerator/precache-manifest.b95461ae2765d56732c1ee3363ab68f0.js",
     "service-worker.js": "/csgobindsgenerator/service-worker.js",
     "static/css/2.07e7f957.chunk.css.map": "/csgobindsgenerator/static/css/2.07e7f957.chunk.css.map",
     "static/css/main.b100e6da.chunk.css.map": "/csgobindsgenerator/static/css/main.b100e6da.chunk.css.map",
@@ -18,8 +18,8 @@
   "entrypoints": [
     "static/js/runtime-main.0238bcfb.js",
     "static/css/2.07e7f957.chunk.css",
-    "static/js/2.77e4e255.chunk.js",
+    "static/js/2.340e2d3b.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.ba5b954f.chunk.js"
+    "static/js/main.2ef59638.chunk.js"
   ]
 }
