@@ -49,5 +49,8 @@ export const model = {
     }),
     toggleTheme: action((state) => {
         state.theme = state.theme === "light" ? "dark" : "light";
+    }),
+    themeInit: action((state, payload) => {
+        state.theme = payload;
     })
 }

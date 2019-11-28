@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createMuiTheme, MuiThemeProvider, createGenerateClassName } from '@material-ui/core/styles';
-import { useStoreState } from 'easy-peasy';
+import { useStoreState, useStoreActions } from 'easy-peasy';
 import { JssProvider } from 'react-jss';
 import Header from './components/Header';
 import Guns from './components/Guns';
@@ -8,11 +8,18 @@ import DisplayBinds from './components/DisplayBinds';
 import Utility from './components/Utility';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import { Grid } from '@material-ui/core';
+import { Grid, useMediaQuery } from '@material-ui/core';
 import './App.css';
 
 const App = () => {
+
+  useEffect(() => {
+    isThemeLight ? setTheme('light') : setTheme('dark');
+  }, [])
+
   const themeMode = useStoreState(state => state.theme);
+  const setTheme = useStoreActions(actions => actions.themeInit);
+  const isThemeLight = useMediaQuery('(prefers-color-scheme: light)');
 
   const generateClassName = createGenerateClassName();
 

@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CSGO Buy Binds Generator
 
-## Available Scripts
+A web app to help you set buy binds for the competitive FPS CS:GO
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+    $ git clone https://github.com/ClassifiedEgg/csgobindsgenerator.git 
+    $ cd csgobindsgenerator
+    $ npm install
+    $ npm run start
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Using the App
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Using the app is extremely easy, click on the 'Click to change' button and then press the button on the keyboard you wish the add binds for. You should see the key you have pressed where 'Click to change' was displayed, then click on the guns you wish to bind that key to. Thats it!
+To copy, hit the copy to clipboard or you can download the binds as a text file by hitting the 'Download as txt file button'.
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Following techonlogies were used in making this app
+1. Create-React-App for frontend
+2. easy-peasy for state management
+3. material-ui for styles
 
-### `npm run build`
+## Credits
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. [CS:GO BINDS GENERATOR](http://csgobindsgenerator.com/) for inspiration
+2. [Total CS:GO](https://totalcsgo.com/binds/keys) for bind list
+3. [Post](https://steamcommunity.com/sharedfiles/filedetails/?id=203603867) on CS:GO's community forum by [>_< myfriend](https://steamcommunity.com/id/setcustomurl) for buy commands
+4. [Freepik](https://www.flaticon.com/authors/freepik) for website icon, [link for pre-edited icon](https://www.flaticon.com/free-icon/keyboard-key-with-j-letter_30968?term=keyboard&page=1&position=64)
+5. [icons8](https://icons8.com/icons) for website icon, [link for pre-edited icon](https://icons8.com/icon/26119/counter-strike)
